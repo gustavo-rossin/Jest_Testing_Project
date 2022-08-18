@@ -13,11 +13,10 @@
 
 const average = (arr) => {
   let avg = 0;
-  let undefinedAnswer;
-  if (arr.length === 0) { return undefinedAnswer; }
+  if (arr.length === 0) { return undefined; }
   for (let i = 0; i < arr.length; i += 1) {
     if (typeof arr[i] !== 'number') {
-      return undefinedAnswer;
+      return undefined;
     } avg += arr[i];
   }
   return Math.round(avg / arr.length);
