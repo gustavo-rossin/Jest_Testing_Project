@@ -8,9 +8,25 @@
   Comportamento:
     - average([2, 2]) // Retorno: 2;
     - average([1, 1]) // Retorno: 1;
-    - average([1, '2']) // Retorno: undefined
+    - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => { };
-
+const average = (arr) => {
+  let avg = 0;
+  let nan;
+  if (arr.length === 0) { return nan; }
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof arr[i] !== 'number') {
+      return nan;
+    } avg += arr[i];
+  }
+  return Math.round(avg / arr.length);
+};
 module.exports = average;
+
+const test = [];
+console.log(test.length);
+console.log(average([3, 4, 5]));
+console.log(average(['um', 'dois', 'tres']));
+console.log(average([2, 4]));
+console.log(average([]));
