@@ -42,5 +42,5 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
-console.log(typeof productDetails('agua', 'agua')[0].details.productId.substring(productDetails('agua', 'agua')[0].name.length, productDetails('agua', 'agua')[0].details.productId.length));
+// console.log(typeof productDetails('agua', 'agua')[0].details.productId.substring(productDetails('agua', 'agua')[0].name.length, productDetails('agua', 'agua')[0].details.productId.length));
 module.exports = productDetails;
